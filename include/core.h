@@ -4,10 +4,9 @@
 #include <string>
 #include <vector>
 
-using std::string;
-using std::vector;
-
 namespace core {
+    using std::string;
+    using std::vector;
     struct Adapter {
         string name;
     }; // 适配器
@@ -21,7 +20,12 @@ namespace core {
     }; // 插件
 
     struct Project {
+        string path;
         string name;
+        string desciption;
+        vector<Adapter> adapters;
+        vector<Driver> drivers;
+        vector<Plugin> plugins;
     }; // 项目
 
 } // core
