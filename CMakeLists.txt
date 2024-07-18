@@ -12,12 +12,15 @@ qt_add_executable(appsakura
     main.cpp
 )
 
+
+
 qt_add_qml_module(appsakura
     URI sakura
     VERSION 1.0
     QML_FILES
         Main.qml
         RESOURCES res.qrc
+
 
 
 )

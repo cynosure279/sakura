@@ -1,5 +1,10 @@
 <RCC>
     <qresource prefix="/">
-        <file>qml/MainWindow.qml</file>
+        <file>qml/windows/MainWindow.qml</file>
+        <file>qml/windows/NavigationWindow.qml</file>
+        <file>qml/global/Allitems.qml</file>
+        <file>qml/pages/homePage.qml</file>
+        <file>qml/global/qmldir</file>
+        <file>res/images/bg.jpg</file>
     </qresource>
 </RCC>
