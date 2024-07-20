@@ -18,7 +18,8 @@ FluLauncher {
 
         FluRouter.routes = {
             "/": "qrc:/qml/windows/MainWindow.qml",
-            "/create" : "qrc:/qml/windows/NavigationWindow.qml"
+            "/create" : "qrc:/qml/windows/NavigationWindow.qml",
+            "/about" : "qrc:/qml/windows/AboutWindow.qml"
         }
         FluRouter.navigate("/")
 

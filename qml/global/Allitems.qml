@@ -25,10 +25,33 @@ FluObject {
         }
     }
     FluPaneItemExpander{
-        title: qsTr("PaneItemExpander Disabled")
-        iconVisible: false
-        disabled: false
+        title: qsTr("Projects")
+        icon: FluentIcons.Project
+        FluPaneItem{
+            title: "Manager"
+            icon: FluentIcons.Manage
 
+        }
+        FluPaneItem{
+            title: "Console"
+            icon: FluentIcons.CommandPrompt
+        }
+
+
+
+
+    }
+    FluPaneItemExpander{
+        title: qsTr("Plugins")
+        icon: FluentIcons.Component
+        FluPaneItem{
+            title: "Manager"
+            icon: FluentIcons.GameConsole
+        }
+        FluPaneItem{
+            title: "Store"
+            icon:FluentIcons.Shop
+        }
     }
 
 

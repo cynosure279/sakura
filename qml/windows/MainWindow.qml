@@ -38,6 +38,7 @@ FluWindow {
         z:999
         pageMode: FluNavigationViewType.NoStack
         items:Allitems
+        footerItems: Footitems
         displayMode: FluNavigationViewType.Auto
         topPadding:{
             if(mainWindow.useSystemAppBar){

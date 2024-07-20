@@ -6,5 +6,7 @@
         <file>qml/pages/homePage.qml</file>
         <file>qml/global/qmldir</file>
         <file>res/images/bg.jpg</file>
+        <file>qml/global/Footitems.qml</file>
+        <file>qml/windows/AboutWindow.qml</file>
     </qresource>
 </RCC>
