@@ -178,9 +178,6 @@ FluScrollablePage{
 
 
 
-    FluFilledButton{
-        text: "Create"
-        onClicked: FluRouter.navigate("/create")
-    }
+
 
 }

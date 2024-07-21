@@ -8,5 +8,6 @@
         <file>res/images/bg.jpg</file>
         <file>qml/global/Footitems.qml</file>
         <file>qml/windows/AboutWindow.qml</file>
+        <file>qml/pages/projectManager.qml</file>
     </qresource>
 </RCC>

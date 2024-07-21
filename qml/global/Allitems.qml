@@ -29,7 +29,11 @@ FluObject {
         icon: FluentIcons.Project
         FluPaneItem{
             title: "Manager"
+            url:"qrc:/qml/pages/projectManager.qml"
             icon: FluentIcons.Manage
+            onTap: {
+                navigationview.push(url)
+            }
 
         }
         FluPaneItem{
