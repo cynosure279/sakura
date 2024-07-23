@@ -8,20 +8,23 @@ import QtQml
 import FluentUI
 
 import "../global"
-
+import"../pages"
 FluWindow {
     id: mainWindow
     visible: true
     width: 1000
+
     height: 668
     minimumWidth: 668
     minimumHeight: 320
     launchMode: FluWindowType.SingleTask
     fitsAppBarWindows: true
     title:qsTr("Sakura")
+
     appBar: FluAppBar {
         height: 30
         z:7
+
 
 
         showDark: true
@@ -36,6 +39,9 @@ FluWindow {
         width:parent.width
         height:parent.height
         z:999
+
+        logo: "qrc:/res/SakuraIcon.svg"
+
         pageMode: FluNavigationViewType.NoStack
         items:Allitems
         footerItems: Footitems
@@ -78,6 +84,7 @@ FluWindow {
         visible: true
         id:tray
         tooltip: "sakura"
+        //icon: "qrc:/res/SakuraIcon.svg"
         menu: Menu{
             MenuItem {
                 text:"exit"
@@ -129,5 +136,6 @@ FluWindow {
             // 取消关闭
             event.accepted = false
         }
+
 
 }

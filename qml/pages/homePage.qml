@@ -50,12 +50,12 @@ FluScrollablePage{
         Layout.fillWidth: true
         Layout.preferredHeight: 320
         Image {
-            id: bg
+            id: galleryBg
             fillMode:Image.PreserveAspectCrop
             anchors.fill: parent
             verticalAlignment: Qt.AlignTop
             sourceSize: Qt.size(960,640)
-            source: "qrc:/res/images/bg.jpg"
+            source: "qrc:/res/images/bgl.png"
         }
 
         FluText{
@@ -87,7 +87,7 @@ FluScrollablePage{
                     FluAcrylic{
                         anchors.fill: parent
                         tintColor: FluTheme.dark ? Qt.rgba(0,0,0,1) : Qt.rgba(1,1,1,1)
-                        target: bg
+                        target: galleryBg
                         tintOpacity: FluTheme.dark ? 0.8 : 0.9
                         blurRadius : 40
                         targetRect: Qt.rect(list.x-list.contentX+10+(control.width)*index,list.y+10,width,height)
@@ -175,6 +175,7 @@ FluScrollablePage{
             delegate: grallery
         }
     }
+
 
 
 

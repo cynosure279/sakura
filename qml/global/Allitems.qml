@@ -38,7 +38,11 @@ FluObject {
         }
         FluPaneItem{
             title: "Console"
+            url:"qrc:/qml/pages/projectConsole.qml"
             icon: FluentIcons.CommandPrompt
+            onTap: {
+                navigationview.push(url)
+            }
         }
 
 
@@ -50,12 +54,22 @@ FluObject {
         icon: FluentIcons.Component
         FluPaneItem{
             title: "Manager"
+            url:"qrc:/qml/pages/pluginsManager.qml"
             icon: FluentIcons.GameConsole
+            onTap: {
+            navigationview.push(url)
+            }
         }
         FluPaneItem{
             title: "Store"
             icon:FluentIcons.Shop
         }
+    }
+    FluPaneItemSeparator{}
+    FluPaneItem{
+        title:qsTr("Servers")
+        icon: FluentIcons.DetachablePC
+
     }
 
 
