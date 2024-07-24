@@ -8,32 +8,71 @@ import "../global"
 import "../windows"
 
 FluScrollablePage{
+
     launchMode: FluPageType.SingleTask
     header: Item{}
 
+    Connections{
+
+        target: FluTheme
+        function onDarkChanged(){
+            if (FluTheme.darkMode === 1){
+                galleryBg.source = "qrc:/res/images/bgl.png"
+            }else {
+                galleryBg.source = "qrc:/res/images/bgd.png"
+            }
+        }
+    }
+
     ListModel{
         id: model_header
+
+        ListElement{
+            icon:""
+
+            title: qsTr("Servers")
+            desc: qsTr("manage your servers.")
+            clicked: function(){
+                Allitems.jmpServerManager()
+
+            }
+        }
+
+
+
+
+
         ListElement{
             icon: ""
-            title: qsTr("Projects")
+            title: qsTr("Projects Manager")
             desc: qsTr("manage your projects.")
-            url: ""
-            clicked: function(model){
-                Qt.openUrlExternally(model.url)
+
+            clicked: function(){
+                Allitems.jmpProjectManager()
+
             }
         }
         ListElement{
             icon: ""
-            title: qsTr("Plugins")
+            title: qsTr("Plugin Manager")
             desc: qsTr("manage your plugins")
 
-            clicked: function(model){
-                Qt.openUrlExternally(model.url)
+            clicked: function(){
+                Allitems.jmpPluginManager()
             }
         }
         ListElement{
             icon: ""
-            title: qsTr("Sakura")
+            title: qsTr("Plugin Store")
+            desc: qsTr("Add your plugins.")
+
+            clicked: function(){
+                Allitems.jmpPluginStore()
+            }
+        }
+        ListElement{
+            icon: ""
+            title: qsTr("Sakura Github")
             desc: qsTr("Sakura is a nonebot panel     with fluent design.")
             url:"https://github.com/cynosure279/sakura"
 
@@ -175,8 +214,6 @@ FluScrollablePage{
             delegate: grallery
         }
     }
-
-
 
 
 

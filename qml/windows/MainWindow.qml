@@ -12,7 +12,7 @@ import"../pages"
 FluWindow {
     id: mainWindow
     visible: true
-    width: 1000
+    width: 980
 
     height: 668
     minimumWidth: 668
@@ -34,6 +34,7 @@ FluWindow {
 
 //navigation
     FluNavigationView{
+
         anchors.fill: parent
         id:navigationView
         width:parent.width

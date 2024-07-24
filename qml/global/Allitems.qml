@@ -8,11 +8,7 @@ FluObject {
     property var navigationview
    // property var paneItemMneu
 
-    function rename(item, newName){
-            if(newName && newName.trim().length>0){
-                item.title = newName;
-            }
-        }
+
 
     FluPaneItem{
         id:itemHome
@@ -28,6 +24,9 @@ FluObject {
         title: qsTr("Projects")
         icon: FluentIcons.Project
         FluPaneItem{
+            id:projectManager
+
+
             title: "Manager"
             url:"qrc:/qml/pages/projectManager.qml"
             icon: FluentIcons.Manage
@@ -53,22 +52,34 @@ FluObject {
         title: qsTr("Plugins")
         icon: FluentIcons.Component
         FluPaneItem{
+            id:pluginManager
             title: "Manager"
-            url:"qrc:/qml/pages/pluginsManager.qml"
+            url:"qrc:/qml/pages/pluginManager.qml"
             icon: FluentIcons.GameConsole
             onTap: {
             navigationview.push(url)
             }
         }
         FluPaneItem{
+            id:pluginStore
             title: "Store"
             icon:FluentIcons.Shop
+            url:"qrc:/qml/pages/pluginStore.qml"
+            onTap: {
+                navigationview.push(url)
+            }
         }
     }
     FluPaneItemSeparator{}
     FluPaneItem{
+        id:serverManager
         title:qsTr("Servers")
         icon: FluentIcons.DetachablePC
+        url:"qrc:/qml/pages/serverManager.qml"
+        onTap:{
+            navigationview.push(url)
+
+        }
 
     }
 
@@ -99,6 +110,19 @@ FluObject {
 
     function startPagebyItem(data) {
         navigationview.startPageByItem(data)
+    }
+
+    function jmpProjectManager() {
+        navigationview.startPageByItem(projectManager)
+    }
+    function jmpPluginManager(){
+        navigationview.startPageByItem(pluginManager)
+    }
+    function jmpServerManager(){
+        navigationview.startPageByItem(serverManager)
+    }
+    function jmpPluginStore(){
+        navigationview.startPageByItem(pluginStore)
     }
 
 }

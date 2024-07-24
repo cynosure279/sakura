@@ -6,12 +6,15 @@ import QtQuick.Controls
 
 ListView{
 
+    property var datalist
+    property string route
+
 
 
     Component{
         id:items
         Item{
-            property string desc: number
+
             width: 120
             height: 75
             FluFrame{
@@ -73,29 +76,11 @@ ListView{
                     hoverEnabled: true
                     onClicked: {}
                 }
+            }
         }
     }
-    }
 
 
-    ListModel {
-        id:testM
-        ListElement {
-            title: "Bill Smith"
-            number: "555 3264"
-
-        }
-        ListElement {
-            title: "John Brown"
-            number: "555 8426"
-
-        }
-        ListElement {
-            title: "Sam Wise"
-            number: "555 0473"
-
-        }
-    }
 
     header: Row{
 
@@ -113,7 +98,7 @@ ListView{
             iconSource: FluentIcons.Add
 
             onClicked: {
-                FluRouter.navigate("/create")
+                FluRouter.navigate(route)
             }
 
         }
@@ -128,7 +113,7 @@ ListView{
 
 
 
-    model: testM
+    model: datalist
 
     delegate: items
 

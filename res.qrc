@@ -10,9 +10,11 @@
         <file>qml/pages/projectManager.qml</file>
         <file>qml/global/Projects.qml</file>
         <file>qml/pages/projectConsole.qml</file>
-        <file>qml/pages/pluginsManager.qml</file>
+        <file>qml/pages/pluginManager.qml</file>
         <file>res/SakuraIcon.svg</file>
         <file>res/images/bgd.png</file>
         <file>res/images/bgl.png</file>
+        <file>qml/pages/serverManager.qml</file>
+        <file>qml/pages/pluginStore.qml</file>
     </qresource>
 </RCC>
