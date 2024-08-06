@@ -20,6 +20,7 @@ qt_add_qml_module(appsakura
     QML_FILES
         Main.qml
         RESOURCES res.qrc
+        RESOURCES doc/界面设计总章.md
 
 
 
