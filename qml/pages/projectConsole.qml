@@ -17,15 +17,7 @@ FluScrollablePage{
 
 
 
-        FluPage{
-            launchMode: FluPageType.SingleTask
-            width: parent.width-120
-            height:parent.height
-            Layout.fillHeight: true
-            Layout.fillWidth: true
 
-
-        }
     }
 }
 

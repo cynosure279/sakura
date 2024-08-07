@@ -4,10 +4,20 @@ import QtQuick.Layouts
 import QtQuick.Controls
 
 
+
+
 ListView{
 
-    property var datalist
-    property string route
+
+
+    ListModel{
+
+        id: datalist
+        ListElement{
+            title: "project1"
+            desc: "desc1"
+        }
+    }
 
 
 
@@ -86,7 +96,7 @@ ListView{
 
         FluAutoSuggestBox{
             width:80
-            height: 40
+            height: 30
 
 
 
@@ -94,11 +104,11 @@ ListView{
         }
         FluIconButton{
             width: 40
-            height: 40
+            height: 30
             iconSource: FluentIcons.Add
 
             onClicked: {
-                FluRouter.navigate(route)
+                FluRouter.navigate("/create")
             }
 
         }
@@ -108,8 +118,8 @@ ListView{
     id:view
     width: 120
     height: parent.height
-    Layout.fillWidth: true
-    Layout.preferredHeight: contentHeight
+
+
 
 
 
@@ -120,11 +130,8 @@ ListView{
 
 
 
-
-
-
-
 }
+
 
 
 

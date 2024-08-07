@@ -20,57 +20,64 @@ FluObject {
             navigationview.push(url)
         }
     }
-    FluPaneItemExpander{
-        title: qsTr("Projects")
-        icon: FluentIcons.Project
-        FluPaneItem{
-            id:projectManager
+
+    FluPaneItem{
+        id:projectManager
 
 
-            title: "Manager"
-            url:"qrc:/qml/pages/projectManager.qml"
-            icon: FluentIcons.Manage
-            onTap: {
-                navigationview.push(url)
-            }
-
-        }
-        FluPaneItem{
-            title: "Console"
-            url:"qrc:/qml/pages/projectConsole.qml"
-            icon: FluentIcons.CommandPrompt
-            onTap: {
-                navigationview.push(url)
-            }
-        }
-
-
-
-
-    }
-    FluPaneItemExpander{
-        title: qsTr("Plugins")
-        icon: FluentIcons.Component
-        FluPaneItem{
-            id:pluginManager
-            title: "Manager"
-            url:"qrc:/qml/pages/pluginManager.qml"
-            icon: FluentIcons.GameConsole
-            onTap: {
+        title: "Project Manager"
+        url:"qrc:/qml/pages/projectManager.qml"
+        icon: FluentIcons.Manage
+        onTap: {
             navigationview.push(url)
-            }
         }
-        FluPaneItem{
-            id:pluginStore
-            title: "Store"
-            icon:FluentIcons.Shop
-            url:"qrc:/qml/pages/pluginStore.qml"
-            onTap: {
-                navigationview.push(url)
-            }
+
+    }
+
+
+
+
+
+
+
+    FluPaneItem{
+        id:pluginManager
+        title: "Plugin Manager"
+        url:"qrc:/qml/pages/pluginManager.qml"
+        icon: FluentIcons.GameConsole
+        onTap: {
+            navigationview.push(url)
         }
     }
+
+    FluPaneItem{
+        id:pluginStore
+        title: "Plugin Store"
+        icon:FluentIcons.Shop
+        url:"qrc:/qml/pages/pluginStore.qml"
+        onTap: {
+            navigationview.push(url)
+        }
+    }
+
+    FluPaneItem{
+        title: "Others"
+        icon: FluentIcons.Component
+    }
+
+    FluPaneItem{
+        title: "Console"
+        url:"qrc:/qml/pages/projectConsole.qml"
+        icon: FluentIcons.CommandPrompt
+        onTap: {
+            navigationview.push(url)
+        }
+    }
+
+
+
     FluPaneItemSeparator{}
+
     FluPaneItem{
         id:serverManager
         title:qsTr("Servers")
