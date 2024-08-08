@@ -26,7 +26,8 @@ qt_add_qml_module(appsakura
 
 )
 
-# Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
+# Qt
+SOURCES include/pluginDatas.hfor iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an
 # explicit, fixed bundle identifier manually though.
 set_target_properties(appsakura PROPERTIES

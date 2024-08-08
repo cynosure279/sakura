@@ -10,6 +10,7 @@ ListView{
 
 
 
+
     ListModel{
 
         id: datalist
@@ -92,7 +93,10 @@ ListView{
 
 
 
+
     header: Row{
+        z:2
+
 
         FluAutoSuggestBox{
             width:80
@@ -117,7 +121,8 @@ ListView{
     }
     id:view
     width: 120
-    height: parent.height
+    Layout.fillHeight: true
+
 
 
 
@@ -126,6 +131,8 @@ ListView{
     model: datalist
 
     delegate: items
+
+    headerPositioning: ListView.OverlayHeader
 
 
 

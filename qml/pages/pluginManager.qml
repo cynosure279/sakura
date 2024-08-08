@@ -4,12 +4,23 @@ import QtQuick.Layouts
 import FluentUI
 import "../global"
 
-FluScrollablePage{
+FluPage{
     launchMode: FluPageType.SingleTask
 
-    //anchors.fill: parent
+
+
+    anchors.fill: parent
     RowLayout{
-        spacing: 15
+
+
+        height:parent.height
+        width: parent.width
+
+
+
+
+
+
 
 
 
@@ -19,7 +30,13 @@ FluScrollablePage{
 
 
 
+
+
+
+
     }
+
 }
+
 
 

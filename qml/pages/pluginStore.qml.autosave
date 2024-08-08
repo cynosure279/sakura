@@ -61,11 +61,12 @@ FluPage{
                 ListModel{
                     id:testM
                     ListElement{
-                        txt:"0"
+                        pTitle:"0"
+                        pDesc:"desc0"
+                        pAuthor:"me"
+                        
                     }
-                    ListElement{
-                        txt:"1"
-                    }
+                    
                     ListElement{
                         txt:"2"
                     }
@@ -109,7 +110,7 @@ FluPage{
 
 
                             FluText{
-                                text: txt
+                                text: pTitle
                                 anchors.fill: parent
                                 anchors.leftMargin: 15
                                 anchors.topMargin: 15

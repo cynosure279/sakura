@@ -4,21 +4,21 @@ import QtQuick.Layouts
 import FluentUI
 import "../global"
 
-FluScrollablePage{
+FluPage{
     launchMode: FluPageType.SingleTask
 
-    //anchors.fill: parent
+
+
+    anchors.fill: parent
     RowLayout{
-        //anchors.fill: parent
-        Layout.fillWidth: true
-        Layout.fillHeight: true
+
+
+        height:parent.height
+        width: parent.width
 
         Projects{}
 
 
-
-
     }
+
 }
-
-
